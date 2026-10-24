@@ -33,6 +33,13 @@ A high-performance, modular 16-bit Arithmetic Logic Unit (ALU) implemented in Ve
 * **`flags[1]`**: Reserved / Unused (`0`)
 * **`flags[0]`**: Parity Flag (Reduction XOR across output bits)
 
+## Future Modifications
+* **Signed Overflow (V) Flag:** Implement a dedicated signed overflow flag utilizing the currently unused `flags[1]` bit.
+* **Hardware Multiplier & Divider:** Integrate combinational multipliers and sequential divider blocks to expand computational capabilities.
+* **Arithmetic Shift Right (SRA):** Add support for sign-extended right shifting for signed numbers.
+* **Pipelining:** Insert internal pipeline registers to improve maximum clock frequency for high-speed FPGA applications.
+* **Processor Integration:** Scale up the project into a fully functional 16-bit RISC processor datapath complete with a register file and control unit.
+
 ## How to Simulate in Quartus Prime / ModelSim
 1. Clone the repository and open **Quartus Prime**.
 2. Create a new project and add all source files from the `rtl/` and `testbench/` directories.
